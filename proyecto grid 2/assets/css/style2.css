@@ -1,0 +1,72 @@
+* {
+  padding: 0 !important;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header header" "aside aside main main main" "aside aside main main main" "aside aside main main main" "aside aside main main main" "footer footer footer footer footer";
+  grid-auto-rows: minmax(50px auto);
+  background: red;
+  min-height: 100vh;
+  padding: 15px;
+  color: white;
+}
+.grid-container header {
+  grid-area: header;
+  background-color: rgb(31, 69, 173);
+  color: white;
+  text-align: center;
+}
+.grid-container aside {
+  grid-area: aside;
+  background-color: rgb(215, 224, 228);
+  color: rgb(15, 99, 133);
+}
+.grid-container main {
+  grid-area: main;
+  background: rgb(215, 224, 228);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.grid-container main .card-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+.grid-container main .card-container .card-header {
+  min-height: 30px;
+  color: rgb(15, 99, 133);
+  text-align: center;
+}
+.grid-container main .card-container .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.grid-container main .card-container .card-body img {
+  transition: transform 0.5s ease-in-out;
+  height: 200px;
+}
+.grid-container main .card-container .card-body:hover {
+  background-color: rgb(218, 208, 208);
+}
+.grid-container main .card-container .card-body:hover img {
+  transform: scale(1.1);
+}
+.grid-container main .card-container .card-footer {
+  min-height: 30px;
+  background-color: rgb(31, 69, 173);
+  text-align: center;
+}
+.grid-container footer {
+  grid-area: footer;
+  background: white;
+  text-align: center;
+  color: black;
+}/*# sourceMappingURL=style2.css.map */
